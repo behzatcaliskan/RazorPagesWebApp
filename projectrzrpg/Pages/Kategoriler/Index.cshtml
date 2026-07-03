@@ -1,0 +1,46 @@
+﻿@page
+@model projectrzrpg.Pages.Kategoriler.IndexModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2 class="mb-3">Kategoriler Listesi</h2>
+
+<a class="btn btn-success btn-sm mb-3" href="/Kategoriler/Create">
+    Kategori Ekle
+</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Kategori No</th>
+            <th>Kategori Adı</th>
+            <th>Açıklama</th>
+            <th>Durum</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.listele)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.KategoriAdi</td>
+                <td>@item.Aciklama</td>
+                <td>@item.Durum</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="/Kategoriler/Edit?id=@item.ID">
+                        Güncelle
+                    </a>
+
+                    <a class="btn btn-danger btn-sm" href="/Kategoriler/Delete?id=@item.ID">
+                        Sil
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,59 @@
+﻿@page
+@model projectrzrpg.Pages.yoneticiler.CreateModel
+@{
+    Layout = "_AdminLayout";
+}
+
+
+<br />
+
+<h2>Yönetici Ekleme EKranı</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>@Model.errorMessage</strong>
+<button type="button" class="btn-close" data-bs-dismis="alert" aria-label="close"></button>
+</div>
+}
+
+<form method="Post">
+    <div class="row mb-3">
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="adsoyad" value="@Model.yoneticibilgi.AdSoyad" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.yoneticibilgi.Email" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="telefon" value="@Model.yoneticibilgi.Telefon" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Adres</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="adres" value="@Model.yoneticibilgi.Adres" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Giriş Tarihi</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="giris" value="@Model.yoneticibilgi.Giris" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">İptal</a>
+        </div>
+    </div>
+</form>

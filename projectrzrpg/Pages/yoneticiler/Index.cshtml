@@ -1,0 +1,107 @@
+﻿@page
+@model IndexModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+
+<div class="row">
+
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Yöneticiler
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            Listele / Ekle / Güncelle / Sil
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                    </div>
+
+                </div>
+
+                <a href="/yoneticiler/Index" class="btn btn-primary btn-sm mt-3">
+                    Yönetici Listesine Git
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                            Kategoriler
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            İkinci tablo CRUD işlemleri
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-list fa-2x text-gray-300"></i>
+                    </div>
+
+                </div>
+
+                <a href="/Kategoriler/Index" class="btn btn-success btn-sm mt-3">
+                    Kategorilere Git
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                            Raporlar
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            Özet rapor ekranı
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-chart-area fa-2x text-gray-300"></i>
+                    </div>
+
+                </div>
+
+                <a href="/Raporlar" class="btn btn-warning btn-sm mt-3">
+                    Raporlara Git
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card shadow mb-4">
+
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Proje Bilgilendirme</h6>
+    </div>
+
+    <div class="card-body">
+        Bu projede ASP.NET Core Razor Pages kullanılarak hazır admin template destekli bir yönetim paneli oluşturulmuştur.
+        Panelde Yöneticiler ve Kategoriler tabloları için CRUD işlemleri yapılacaktır.
+        Listeleme, ekleme, güncelleme, silme, arama ve raporlama işlemleri admin panel üzerinden yönetilecektir.
+    </div>
+
+</div>

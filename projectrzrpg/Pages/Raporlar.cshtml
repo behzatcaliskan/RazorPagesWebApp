@@ -1,0 +1,200 @@
+﻿@page
+@model projectrzrpg.Pages.RaporlarModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<h1 class="h3 mb-4 text-gray-800">Raporlar</h1>
+
+@if (!string.IsNullOrEmpty(Model.HataMesaji))
+{
+    <div class="alert alert-danger">
+        @Model.HataMesaji
+    </div>
+}
+
+<div class="row">
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Toplam Yönetici
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @Model.YoneticiSayisi
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-user-shield fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                            Toplam Kategori
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @Model.KategoriSayisi
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-folder fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                            Aktif Kategori
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @Model.AktifKategoriSayisi
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                            Pasif Kategori
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @Model.PasifKategoriSayisi
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <i class="fas fa-times-circle fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-lg-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Son Eklenen Yönetici</h6>
+            </div>
+
+            <div class="card-body">
+                <h5 class="font-weight-bold text-gray-800">
+                    @Model.SonYonetici
+                </h5>
+                <p class="mb-0 text-gray-600">
+                    Yönetici tablosuna en son eklenen kayıt bilgisidir.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-success">Son Eklenen Kategori</h6>
+            </div>
+
+            <div class="card-body">
+                <h5 class="font-weight-bold text-gray-800">
+                    @Model.SonKategori
+                </h5>
+                <p class="mb-0 text-gray-600">
+                    Kategoriler tablosuna en son eklenen kayıt bilgisidir.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="card shadow mb-4">
+
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Rapor Açıklamaları
+        </h6>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Rapor Adı</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Yönetici Raporu</td>
+                    <td>Sistemde kayıtlı toplam yönetici sayısını gösterir.</td>
+                </tr>
+
+                <tr>
+                    <td>Kategori Raporu</td>
+                    <td>Sistemde kayıtlı toplam kategori sayısını gösterir.</td>
+                </tr>
+
+                <tr>
+                    <td>Aktif / Pasif Kategori Raporu</td>
+                    <td>Kategorilerin durum bilgisine göre aktif ve pasif dağılımını gösterir.</td>
+                </tr>
+
+                <tr>
+                    <td>Son Kayıt Raporu</td>
+                    <td>Tablolara en son eklenen kayıtları özet olarak gösterir.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<a href="/" class="btn btn-secondary">
+    Yönetim Paneline Dön
+</a>

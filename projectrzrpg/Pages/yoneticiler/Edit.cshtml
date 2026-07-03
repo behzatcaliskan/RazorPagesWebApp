@@ -1,0 +1,45 @@
+﻿@page
+@model projectrzrpg.Pages.yoneticiler.EditModel
+@{
+    Layout = "_AdminLayout";
+}
+
+
+}
+
+<form method="Post">
+    <input type="hidden" name="id" value="@Model.yoneticibilgi.ID" />
+    <div class="row mb-3">
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="adsoyad" value="@Model.yoneticibilgi.AdSoyad" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.yoneticibilgi.Email" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="telefon" value="@Model.yoneticibilgi.Telefon" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Adres</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="adres" value="@Model.yoneticibilgi.Adres" />
+        </div>
+    </div>
+
+<div class="row mb-3">
+    <div class="offset-sm-3 col-sm-3 d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div class="col-sm-3 d-grid">
+        <a class="btn btn-outline-primary" href="/" role="button">İptal</a>
+    </div>
+</div>
+</form>
